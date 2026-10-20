@@ -1,0 +1,176 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Shortlist design tokens.
+ * Ground: cool paper / blue-black. Ink: deep navy. Brand: ultramarine, used for focus,
+ * links and the evidence connectors. Match / partial / gap are the three states the whole
+ * product speaks in, so they are reserved for meaning and never used as decoration.
+ */
+:root {
+  --radius: 0.75rem;
+  --background: #f2f4f8;
+  --foreground: #101828;
+  --card: #ffffff;
+  --card-foreground: #101828;
+  --popover: #ffffff;
+  --popover-foreground: #101828;
+  --primary: #0f1b3d;
+  --primary-foreground: #ffffff;
+  --secondary: #e8ecf3;
+  --secondary-foreground: #101828;
+  --muted: #e8ecf3;
+  --muted-foreground: #566074;
+  --accent: #e3e8f6;
+  --accent-foreground: #101828;
+  --destructive: #be2d4f;
+  --border: #dce1ea;
+  --input: #cfd6e3;
+  --ring: #2d3bff;
+  --brand: #2d3bff;
+  --brand-soft: #e6e9ff;
+  --match: #0f7b55;
+  --match-soft: #e0f3ea;
+  --partial: #9a5a06;
+  --partial-soft: #fbefd9;
+  --gap: #be2d4f;
+  --gap-soft: #fbe4ea;
+  --unknown: #566074;
+  --chart-1: #0f7b55;
+  --chart-2: #9a5a06;
+  --chart-3: #be2d4f;
+  --chart-4: #2d3bff;
+  --chart-5: #8c97ad;
+  --grid-dot: rgb(16 24 40 / 0.09);
+}
+
+.dark {
+  --background: #0b1022;
+  --foreground: #e8ecf7;
+  --card: #121933;
+  --card-foreground: #e8ecf7;
+  --popover: #121933;
+  --popover-foreground: #e8ecf7;
+  --primary: #e8ecf7;
+  --primary-foreground: #0b1022;
+  --secondary: #1b2447;
+  --secondary-foreground: #e8ecf7;
+  --muted: #1b2447;
+  --muted-foreground: #9aa5bd;
+  --accent: #1f2a55;
+  --accent-foreground: #e8ecf7;
+  --destructive: #ff7a95;
+  --border: #243055;
+  --input: #2f3c6b;
+  --ring: #8c98ff;
+  --brand: #8c98ff;
+  --brand-soft: #1f2860;
+  --match: #3ddc97;
+  --match-soft: #123a2e;
+  --partial: #f2b84b;
+  --partial-soft: #3b2d10;
+  --gap: #ff7a95;
+  --gap-soft: #43182a;
+  --unknown: #9aa5bd;
+  --chart-1: #3ddc97;
+  --chart-2: #f2b84b;
+  --chart-3: #ff7a95;
+  --chart-4: #8c98ff;
+  --chart-5: #6b779b;
+  --grid-dot: rgb(232 236 247 / 0.08);
+}
+
+@theme inline {
+  --font-sans: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-source-serif), ui-serif, Georgia, serif;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-brand: var(--brand);
+  --color-brand-soft: var(--brand-soft);
+  --color-match: var(--match);
+  --color-match-soft: var(--match-soft);
+  --color-partial: var(--partial);
+  --color-partial-soft: var(--partial-soft);
+  --color-gap: var(--gap);
+  --color-gap-soft: var(--gap-soft);
+  --color-unknown: var(--unknown);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "ss01", "tnum";
+    text-rendering: optimizeLegibility;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply font-sans tracking-tight text-balance;
+  }
+  ::selection {
+    background: color-mix(in oklab, var(--brand) 28%, transparent);
+  }
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  .grid-dots {
+    background-image: radial-gradient(var(--grid-dot) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+  .evidence-quote {
+    @apply font-serif italic leading-relaxed text-foreground/85;
+  }
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
