@@ -1,0 +1,24 @@
+{
+  "name": "job-search-agent",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Local-first frontend job search and ranking agent using Adzuna and Ollama.",
+  "scripts": {
+    "start": "node src/run-agent.js",
+    "analyze:sample": "node src/index.js",
+    "validate:qwen": "node scripts/qwen-validation.js",
+    "mark": "node scripts/mark-job.js",
+    "jobs:status": "node scripts/job-status.js",
+    "apply:pack": "node scripts/application-pack.js",
+    "skills:report": "node scripts/skill-gap-report.js",
+    "validate:ab": "node scripts/qwen-validation.js --extractor both --reuse-qwen data/qwen-validation.json",
+"test": "node src/test-job-pre-ranker.js && node src/test-job-filter-unit.js && node src/test-job-source-detection.js && node src/test-job-scorer.js && node src/test-location-detection.js && node src/test-search-config.js && node src/test-himalayas-source.js && node src/test-dedup-wiring.js && node src/test-restriction-pipeline.js && node src/test-description-enrichment.js && node src/test-requirement-matching.js && node src/test-adzuna-request-policy.js && node src/test-restrictions-and-languages.js && node src/test-shortlist.js && node src/test-hybrid-detection.js && node src/test-run-reliability.js && node src/test-dedup-fullstack-remote-scope.js && node src/test-decision-accuracy.js && node src/test-extraction-audit.js && node src/test-claude-extractor.js && node src/test-extraction-compare.js && node src/test-ab-validation-script.js && node src/test-job-state.js && node src/test-source-registry.js && node src/test-freehire-source.js && node src/test-requirement-coverage.js && node src/test-review-summary.js && node src/test-skill-gap.js && node src/test-triage.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^18.0.6"
+  },
+  "private": true
+}

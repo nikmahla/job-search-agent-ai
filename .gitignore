@@ -1,0 +1,16 @@
+# Secrets
+.env
+.env.*
+
+# Personal data and job results
+data/
+data.zip
+
+# Dependencies
+node_modules/
+
+# macOS
+.DS_Store
+
+# Local archives
+*.zip
