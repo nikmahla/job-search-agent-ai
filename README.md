@@ -8,7 +8,7 @@ An AI-powered job search assistant that discovers, filters, ranks, and analyzes 
 **Try the interactive UI:**  
 https://job-search-agent-ai.vercel.app/
 
-[![AI Job Search Agent Demo](./apps/web/public/demo-preview.png)](https://job-search-agent-ai.vercel.app/)
+[![AI Job Search Agent Demo](./apps/web/public/demo-preview.png)](<img width="1350" height="749" alt="Image" src="https://github.com/user-attachments/assets/9e957ea3-5d48-482a-a1c9-8a9d1dcfceaf" />)
 
 
 > **Demo mode:** This preview runs on a sample candidate and simulated job-search results. Your own profile, preferences, and live job sources aren't connected yet.
