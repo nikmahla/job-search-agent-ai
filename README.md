@@ -1,29 +1,48 @@
-## 🛠️ Tech Stack
+# AI Job Search Agent
 
-### Agent
+An AI-powered job search assistant that discovers, filters, ranks, and analyzes job postings based on a candidate's skills, preferences, and eligibility rules.
 
-- Node.js
-- JavaScript
-- Ollama
-- Qwen
-- REST APIs
-- Automated testing
+## 🚀 Live Demo
 
-### Web Interface
+**Try the interactive UI:**  
+https://job-search-agent-ai.vercel.app/
 
-- Next.js
-- React
-- TypeScript
-- Tailwind CSS
-- shadcn/ui
-- Framer Motion
-- Recharts
-- TanStack Query
-- Zod
+> **Demo mode:** This preview runs on a sample candidate and simulated job-search results. Your own profile, preferences, and live job sources aren't connected yet.
+>
+> The demo uses the same matching concepts as the agent — scoring rules, eligibility gates, decisions, requirement coverage, and skill-gap analysis — with synthetic data.
 
-## ⚙️ Run Locally
+## ✨ Features
 
-Install the project dependencies:
+- 🔎 Multi-source job discovery
+- 🎯 Deterministic job filtering and eligibility rules
+- 📊 Pre-ranking and job prioritization
+- 🤖 AI-powered job analysis with Qwen
+- 💾 Cached analyses to reduce unnecessary AI calls
+- 🧠 Skill-gap analysis
+- 📋 Detailed job triage and audit records
+- 🔄 Duplicate detection and job-state tracking
+- 📌 Explainable job matching with requirement coverage and decision factors
+- 🧪 Offline test coverage for core pipeline logic
 
-```bash
-npm install
+## 🏗️ Pipeline
+
+```text
+Job Sources
+    ↓
+Discovery
+    ↓
+Deduplication
+    ↓
+Filtering
+    ↓
+Pre-Ranking
+    ↓
+Enrichment
+    ↓
+Eligibility Re-check
+    ↓
+AI Analysis
+    ↓
+Scoring & Decision
+    ↓
+Results
