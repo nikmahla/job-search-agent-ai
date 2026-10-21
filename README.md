@@ -10,6 +10,7 @@ https://job-search-agent-ai.vercel.app/
 
 [![AI Job Search Agent Demo](./apps/web/public/demo-preview.png)](https://job-search-agent-ai.vercel.app/)
 
+
 > **Demo mode:** This preview runs on a sample candidate and simulated job-search results. Your own profile, preferences, and live job sources aren't connected yet.
 >
 > The demo uses the same matching concepts as the agent — scoring rules, eligibility gates, decisions, requirement coverage, and skill-gap analysis — with synthetic data.
